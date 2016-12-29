@@ -157,19 +157,19 @@ map:{
     # o columnNullObjectMap: (NotRequired - Default map:{})
     #  You can get a null object when the column is null.
     #
-    #; columnNullObjectMap = map:{
-    #    ; providerPackage = $$packageBase$$.nogen.cache
-    #    ; isGearedToSpecify = true
-    #    ; columnMap = map:{
-    #        ; MEMBER_STATUS = map:{
-    #            ; DESCRIPTION = CachedMemberStatus.get(this, "$$columnName$$", $$primaryKey$$)
-    #        }
-    #        ; MEMBER_SECURITY = map:{
-    #            ; REMINDER_ANSWER = CachedMemberSecurity.get(this, "$$columnName$$", $$primaryKey$$)
-    #            ; REMINDER_QUESTION = CachedMemberSecurity.get(this, "$$columnName$$", $$primaryKey$$)
-    #        }
-    #    }
-    #}
+    ; columnNullObjectMap = map:{
+        ; providerPackage = org.dbflute.kvs.cache
+        ; isGearedToSpecify = true
+        ; columnMap = map:{
+            ; MEMBER_STATUS = map:{
+                ; DESCRIPTION = KvsCacheColumnNullObject.getInstance().findColumn(this, "$$columnName$$", $$primaryKey$$)
+            }
+            ; MEMBER_SECURITY = map:{
+                ; REMINDER_ANSWER = KvsCacheColumnNullObject.getInstance().findColumn(this, "$$columnName$$", $$primaryKey$$)
+                ; REMINDER_QUESTION = KvsCacheColumnNullObject.getInstance().findColumn(this, "$$columnName$$", $$primaryKey$$)
+            }
+        }
+    }
     # - - - - - - - - - -/
 
     # /- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
