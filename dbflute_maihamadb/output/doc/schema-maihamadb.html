@@ -280,6 +280,7 @@ dl.procedurelist dd.column pre {
 <p class="sisterlink"><a href="./history-maihamadb.html">to HistoryHTML</a></p>
 <p class="sistersublink">
 <a href="./properties-maihamadb.html">to PropertiesHTML</a>
+| <a href="./lastadoc-harbor.html">to lastadoc-harbor.html</a>
 | <a href="./lastadoc-nonrdb.html">to lastadoc-nonrdb.html</a>
 </p>
 </div>
@@ -1152,6 +1153,7 @@ dl.procedurelist dd.column pre {
 		<th>ColumnComment</th>
 		<th>PropertyName</th>
 		<th>JavaType</th>
+		<th>NullObj</th>
 	</tr>
 	</thead>
 	<tr>
@@ -1171,6 +1173,7 @@ dl.procedurelist dd.column pre {
 		<td class="commentcell"> そのまま&nbsp;one-to-one&nbsp;を構成するためのFKとなる。</td>
 		<td class="subcell">memberId</td>
 		<td class="subcell">Integer</td>
+		<td class="flgcell"> &nbsp;</td>
 	</tr>
 	<tr>
 		<td class="rownumcell">2</td>
@@ -1189,6 +1192,7 @@ dl.procedurelist dd.column pre {
 		<td class="commentcell"> ログイン時に利用するパスワード。<br>本当は良くないが、Exampleなのでひとまず暗号化していない。</td>
 		<td class="subcell">loginPassword</td>
 		<td class="subcell">String</td>
+		<td class="flgcell"> &nbsp;</td>
 	</tr>
 	<tr>
 		<td class="rownumcell">3</td>
@@ -1207,6 +1211,7 @@ dl.procedurelist dd.column pre {
 		<td class="commentcell"> パスワードを忘れた際のリマインダ機能における質問の内容。</td>
 		<td class="subcell">reminderQuestion</td>
 		<td class="subcell">String</td>
+		<td class="flgcell">o</td>
 	</tr>
 	<tr>
 		<td class="rownumcell">4</td>
@@ -1225,6 +1230,7 @@ dl.procedurelist dd.column pre {
 		<td class="commentcell"> パスワードを忘れた際のリマインダ機能における質問の答え。</td>
 		<td class="subcell">reminderAnswer</td>
 		<td class="subcell">String</td>
+		<td class="flgcell">o</td>
 	</tr>
 	<tr>
 		<td class="rownumcell">5</td>
@@ -1243,6 +1249,7 @@ dl.procedurelist dd.column pre {
 		<td class="commentcell"> リマインダを利用した回数。<br>これが多いと忘れっぽい会員と言えるが、そんなことを知ってもしょうがない。</td>
 		<td class="subcell">reminderUseCount</td>
 		<td class="subcell">Integer</td>
+		<td class="flgcell"> &nbsp;</td>
 	</tr>
 	<tr>
 		<td class="rownumcell">6</td>
@@ -1261,6 +1268,7 @@ dl.procedurelist dd.column pre {
 		<td class="commentcell"> &nbsp;</td>
 		<td class="subcell">registerDatetime</td>
 		<td class="subcell">LocalDateTime</td>
+		<td class="flgcell"> &nbsp;</td>
 	</tr>
 	<tr>
 		<td class="rownumcell">7</td>
@@ -1279,6 +1287,7 @@ dl.procedurelist dd.column pre {
 		<td class="commentcell"> &nbsp;</td>
 		<td class="subcell">registerUser</td>
 		<td class="subcell">String</td>
+		<td class="flgcell"> &nbsp;</td>
 	</tr>
 	<tr>
 		<td class="rownumcell">8</td>
@@ -1297,6 +1306,7 @@ dl.procedurelist dd.column pre {
 		<td class="commentcell"> &nbsp;</td>
 		<td class="subcell">updateDatetime</td>
 		<td class="subcell">LocalDateTime</td>
+		<td class="flgcell"> &nbsp;</td>
 	</tr>
 	<tr>
 		<td class="rownumcell">9</td>
@@ -1315,6 +1325,7 @@ dl.procedurelist dd.column pre {
 		<td class="commentcell"> &nbsp;</td>
 		<td class="subcell">updateUser</td>
 		<td class="subcell">String</td>
+		<td class="flgcell"> &nbsp;</td>
 	</tr>
 	<tr>
 		<td class="rownumcell">10</td>
@@ -1333,6 +1344,7 @@ dl.procedurelist dd.column pre {
 		<td class="commentcell"> &nbsp;</td>
 		<td class="subcell">versionNo</td>
 		<td class="subcell">Long</td>
+		<td class="flgcell"> &nbsp;</td>
 	</tr>
 </table>
 <h2 id="member_service" title="type=TABLE, primaryKey={MEMBER_SERVICE_ID}, nameLength=14, columnCount=9">
@@ -1546,6 +1558,7 @@ dl.procedurelist dd.column pre {
 		<th>ColumnComment</th>
 		<th>PropertyName</th>
 		<th>JavaType</th>
+		<th>NullObj</th>
 	</tr>
 	</thead>
 	<tr>
@@ -1565,6 +1578,7 @@ dl.procedurelist dd.column pre {
 		<td class="commentcell"> 会員ステータスを識別するコード。<br>固定的なデータなので連番とか番号にはせず、データを直接見たときも人が直感的にわかるように、例えば&nbsp;"FML"&nbsp;とかの３桁のコード形式にしている。(3って何会員だっけ？とかの問答をやりたくないので)</td>
 		<td class="subcell">memberStatusCode</td>
 		<td class="subcell">String</td>
+		<td class="flgcell"> &nbsp;</td>
 	</tr>
 	<tr>
 		<td class="rownumcell">2</td>
@@ -1583,6 +1597,7 @@ dl.procedurelist dd.column pre {
 		<td class="commentcell"> 表示用の名称。<br>国際化対応するときはもっと色々考える必要があるかと...ということで英語名カラムがないので、そのまま区分値メソッド名の一部としても利用される。</td>
 		<td class="subcell">memberStatusName</td>
 		<td class="subcell">String</td>
+		<td class="flgcell"> &nbsp;</td>
 	</tr>
 	<tr>
 		<td class="rownumcell">3</td>
@@ -1601,6 +1616,7 @@ dl.procedurelist dd.column pre {
 		<td class="commentcell"> 会員ステータスそれぞれの説明。<br>区分値の一つ一つの要素に気の利いた説明があるとディベロッパーがとても助かるので絶対に欲しい。</td>
 		<td class="subcell">description</td>
 		<td class="subcell">String</td>
+		<td class="flgcell">o</td>
 	</tr>
 	<tr>
 		<td class="rownumcell">4</td>
@@ -1619,6 +1635,7 @@ dl.procedurelist dd.column pre {
 		<td class="commentcell"> UI上のステータスの表示順を示すNO。<br>並べるときは、このカラムに対して昇順のソート条件にする。</td>
 		<td class="subcell">displayOrder</td>
 		<td class="subcell">Integer</td>
+		<td class="flgcell"> &nbsp;</td>
 	</tr>
 </table>
 <h2 id="member_withdrawal" title="type=TABLE, primaryKey={MEMBER_ID}, nameLength=17, columnCount=8">

@@ -76,8 +76,8 @@ public class DBFluteConfig {
     protected boolean _emptyStringParameterAllowed = false;
     protected boolean _overridingQueryAllowed = false;
     protected boolean _nonSpecifiedColumnAccessAllowed = false;
-    protected boolean _columnNullObjectAllowed = false;
-    protected boolean _columnNullObjectGearedToSpecify = false;
+    protected boolean _columnNullObjectAllowed = true;
+    protected boolean _columnNullObjectGearedToSpecify = true;
     protected boolean _disableSelectIndex;
     protected boolean _queryUpdateCountPreCheck = false;
 
